@@ -1,5 +1,4 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');*/
-
 body
 {
 	display: flex;
@@ -14,18 +13,17 @@ button.Start_Button
 {
 	background-color: rgba(55, 55, 55, 1.0);
 	color: rgba(255, 255, 255, 1.0);
-	transform: translate(0, 18vmax);
+	transform: translate(0, 28vh);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	grid-template-rows: 40vmax minmax(20vmin, 26vmax);
 	border: none;
 	width: 18vmax;
 	height: 11vmax;
 	box-sizing: border-box;
-	border-radius: 1.1em;
-	font-size: 2vmax;
+	border-radius: 1.1vw;
+	font-size: 3.1vw;
 	font-weight: bold;
 	font-family: ButtonFont;
 	cursor: pointer;
@@ -59,6 +57,7 @@ div.Question_Container
 	border-top-left-radius: .6rem;
 	border-top-right-radius: .6rem;
 	box-sizing: border-box;
+	transform: translate(0, -1em);
 }
 
 div.Question_Container
@@ -68,7 +67,7 @@ div.Question_Container
 	justify-content: center;
 	align-items: center;
 	gap: 1vmin;
-	font-size: 2.8vmin;
+	font-size: clamp(3.1vmin, 1.7vw, 3.5vmax);
 	font-stretch: 12;
 	font-weight: bold;
 	color: rgba(255, 255, 255, 1.0);
@@ -99,11 +98,21 @@ div.Answer_Option_Container > div.Answer_Option
 	cursor: pointer;
 }
 
-div.Answer_Option + button
+div.Answer_Option:hover
+{
+	border: .18em solid rgba(255, 255, 255, 1.0);
+	background-color: peachpuff;
+	transition: 800ms ease-in-out;
+}
+
+div.Answer_Option_Container + button
 {	
 	display: flex;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
 	flex-direction: row;
-	translate: 12vmin;
+	transform: translate(12vmin, 15vh);
 	border: none;
 	font-weight: bold;
 	cursor: pointer;

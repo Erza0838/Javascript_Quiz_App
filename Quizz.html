@@ -6,36 +6,32 @@
 	<title>
 		Quizz App
 	</title>
-
 		<link rel="stylesheet" href="Quizz.css">
-		<script src="Quiz.js" defer></script>
+		<script src="Quiz.js" defer type="module"></script>
+		<script src="Quizz_Answer.mjs" defer type="module"></script>
 </head>
-<body>
-		<button class="Start_Button" id="Start_Button_Id">
-			Mulai Quizz
-		</button>
+<body>	
+	<!-- Button untuk memulai quizz -->
+	<button class="Start_Button" id="Start_Button_Id">
+		Mulai Quizz 
+	</button>
+	<!-- Baris akhir code -->
 	<main class="Quiz_Container" id="Form_Container_Id">		
-		<div class="Question_Container">
-			Siapa pencipta Linux?
+		<div class="Question_Container" id="Show_Quetions">
 		</div>
-			<div class="Answer_Option_Container">	
-				<div class="Answer_Option">
-					Linus Trovald
+			<div class="Answer_Option_Container" id="Answer_Option_Container">	
+				<div class="Answer_Option" id="Random_Answer_Options">	
 				</div>
-					<div class="Answer_Option">
-						James gostling
-					</div>
-				<div class="Answer_Option">
-					Bill Gates
+				<div class="Answer_Option" id="Random_Answer_Options">
 				</div>
-					<div class="Answer_Option">
-						Elon Musk
-					</div>
-				<button>
-					Selanjutnya
-				</button>
+				<div class="Answer_Option" id="Random_Answer_Options">
+				</div>
+				<div class="Answer_Option" id="Random_Answer_Options">
+				</div>
 			</div>
+			<button>
+				Selanjutnya
+			</button>
 	</main>
-
 </body>
 </html>
