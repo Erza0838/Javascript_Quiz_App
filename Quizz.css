@@ -85,7 +85,7 @@ div.Answer_Option_Container
 }	
 
 div.Answer_Option_Container > div.Answer_Option
-{
+{	
 	font-weight: bold;
 	color: rgba(55, 55, 55, 1.0);
 	display: block;
@@ -95,14 +95,17 @@ div.Answer_Option_Container > div.Answer_Option
 	border-radius: .8em;
 	padding-top: 1%;
 	padding-bottom: 1%;
+	padding-left: 3%;
+	padding-right: 3%;
 	cursor: pointer;
 }
 
 div.Answer_Option:hover
 {
 	border: .18em solid rgba(255, 255, 255, 1.0);
+	/* border: none; */
 	background-color: peachpuff;
-	transition: 800ms ease-in-out;
+	transition: 500ms ease-in-out;
 }
 
 div.Answer_Option_Container + button
@@ -121,4 +124,11 @@ div.Answer_Option_Container + button
 	border-radius: .8em;
 	padding-top: 1%;
 	padding-bottom: 1%;
+}
+
+div.Answer_Option_Container + button:hover
+{
+	border: .18em solid rgba(255, 255, 255, 1.0);
+	background-color: peachpuff;
+	transition: 500ms ease-in-out;
 }

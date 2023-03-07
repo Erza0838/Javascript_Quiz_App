@@ -1,38 +1,62 @@
-import 
-{
-    containerAnswerOption
-} from "./Quiz.js";
-
 export
 {
-    answerQuestionPage1,
-    answerQuestionPage2,
-    ListQuizzAnswer
+    answerQuestionPage0,
+    answerQuestionPage1,   
+    answerQuestionPage2,   
+    answerQuestionPage3,
+    incrementValue,
+    ListQuizzAnswerNumberZero,
+    ListQuizzAnswerNumberOne,
+    ListQuizzAnswerNumberTwo,
+    ListQuizzAnswerNumberThree
 }
+
 // Array untuk menyimpan jawaban - jawaban quiz
-let answerQuestionPage1 = []
-let answerQuestionPage2 
+let answerQuestionPage0 = ["Linus Trovalds", "Bil Gates", "James gostling", "Elon Musk"]
+let answerQuestionPage1 = ["string const bilanganGanjil", "const Bilangan Ganjil", "const bilanganGanjil", "string const Bilangan-Ganjil"]
+let answerQuestionPage2 = ["C", "C++", "Pyhton", "Rust"]
+let answerQuestionPage3 = ["Mengakses Elemen HTML", "Manipulasi Elemen HTML", "Meniyimpan data di browser", "Mengakses Child elemen terakhir"]
 // Baris akhir array
-let randomAnswer
-let randomAnswerIndexs
-// Function berisi jawaban pertanyaan halaman pertama
-function ListQuizzAnswer(AnswerOne)
-{    
-    switch(AnswerOne)
-    {
-        case undefined :
-        {
-            AnswerOne = ["Linus Trovalds", "Bil Gates", "James gostling", "Elon Musk"]
-            for(randomAnswer of AnswerOne)
-            {   
-                return randomAnswer
-                // for(let incrementValue = 0; containerAnswerOption.childNodes.length > incrementValue; incrementValue++)
-                // {
-                //     return randomAnswer[incrementValue]
-                // }
-            }
-        }
-        break
+let indexValue
+let incrementValue
+
+// Function berisi jawaban pertanyaan halaman ke-0
+function ListQuizzAnswerNumberZero(AnswerZero)
+{   
+    indexValue = AnswerZero
+    while(indexValue != undefined)
+    {   
+        return indexValue
+    }
+}
+// Baris akhir function 
+
+// Funciton berisi jawaban pertanyaan halaman pertama
+function ListQuizzAnswerNumberOne(AnswerOne)
+{
+    while(AnswerOne != undefined)
+    {   
+        return AnswerOne
+    }
+}
+// Baris akhir function 
+
+// Funciton berisi jawaban pertanyaan halaman kedua
+function ListQuizzAnswerNumberTwo(AnswerTwo)
+{
+    while(AnswerTwo != undefined)
+    {   
+        return AnswerTwo
+    }
+}
+// Baris akhir function 
+
+// Funciton berisi jawaban pertanyaan halaman kedua
+function ListQuizzAnswerNumberThree(AnswerThree)
+{
+    while(AnswerThree != undefined)
+    {   
+        return AnswerThree
     }
 }
 // Baris akhir function 
