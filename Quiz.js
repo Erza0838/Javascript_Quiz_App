@@ -5,10 +5,14 @@ import
 	ListQuizzAnswerNumberOne,
 	ListQuizzAnswerNumberTwo,
 	ListQuizzAnswerNumberThree,
+	ListQuizzAnswerNumberFour,
+	ListQuizzAnswerNumberFive,
 	answerQuestionPage0,
 	answerQuestionPage1,
 	answerQuestionPage2,
-	answerQuestionPage3
+	answerQuestionPage3,
+	answerQuestionPage4,
+	answerQuestionPage5
 } from "./Quizz_Answer.mjs"
 // Baris akhir import
 
@@ -36,7 +40,7 @@ function QuestionsList()
 		"Yang termasuk bahasa interpreter adalah?",
 		"DOM digunakan untuk?",
 		"Penulisan array pada javascript?",
-		"Yang bukan pencipta bahasa pemrograman adalah?",
+		"Yang pencipta bahasa pemrograman, kecuali?",
 	]
 }
 QuestionsList()
@@ -51,23 +55,18 @@ function ChooseRandomQuestions()
 	let indexTwoAndFiveNewRandomNumbers = indexTwoAndFiveRandomNumbers += 5 - 3  * 4 / 2 + 1
 	let randomIndexQuestion = questionsList[mathRandomNumbers]
 	let indexOfquestiionsList = [randomIndexQuestion, questionsList[indexTwoAndFiveNewRandomNumbers]]	
-	// console.log(indexOfquestiionsList[1])
-	// return randomIndexQuestion
-	for(let loopCount = 0; randomIndexQuestion.length > loopCount; loopCount++)
+
+	for(let loopCount = 0; questionsList.length - 3 > loopCount; loopCount++)
 	{	
-		console.log(loopCount)
-		if(loopCount == 0)
-		{
-			if(questionsList[0] && questionsList[1] > loopCount)
+		if(questionsList.at(3) && questionsList.at(4) && questionsList.at(5) == loopCount)
+		{	
+			if(questionsList.at(3) && questionsList.at(4) && questionsList.at(5) > loopCount)
 			{
 				return indexOfquestiionsList[0]
 			}
 		}
-		if(loopCount > 1 || loopCount == 1)
-		{	
-			return indexOfquestiionsList[1]
-		}
 	}
+	return indexOfquestiionsList[1]
 }
 ChooseRandomQuestions()
 // Baris akhir function
@@ -178,7 +177,7 @@ let showQuestionAndAnswer =
 								{
 									for(let compareValue2 = 0; containerAnswerOption.childElementCount > compareValue2; compareValue2++)
 									{	
-										addAnswerToChildNodes2 = ListQuizzAnswerNumberOne(AnswerValues2[compareValue2])
+										addAnswerToChildNodes2 = ListQuizzAnswerNumberTwo(AnswerValues2[compareValue2])
 										addAnswerToPage2 = containerAnswerOption.children[compareValue2].innerText = addAnswerToChildNodes2
 									}	
 								}
@@ -199,8 +198,40 @@ let showQuestionAndAnswer =
 									}	
 								}
 							})
-						}
-						// Baris akhir function 
+						},
+    ShowAnswerToPage4 : function ShowAnswerPageFour()
+					  {
+						let addAnswerToChildNodes4
+						let addAnswerToPage4
+						[answerQuestionPage4].forEach( (AnswerValues4) => 
+						{	
+							if(AnswerValues4 != undefined)
+							{
+								for(let compareValue4 = 0; containerAnswerOption.childElementCount > compareValue4; compareValue4++)
+								{	
+									addAnswerToChildNodes4 = ListQuizzAnswerNumberFour(AnswerValues4[compareValue4])
+									addAnswerToPage4 = containerAnswerOption.children[compareValue4].innerText = addAnswerToChildNodes4
+								}	
+							}
+						})
+					    },
+    ShowAnswerToPage5 : function ShowAnswerPageFive()
+					  {
+						let addAnswerToChildNodes5
+						let addAnswerToPage5
+						[answerQuestionPage5].forEach( (AnswerValues5) => 
+						{	
+							if(AnswerValues5 != undefined)
+							{
+								for(let compareValue5 = 0; containerAnswerOption.childElementCount > compareValue5; compareValue5++)
+								{	
+									addAnswerToChildNodes5 = ListQuizzAnswerNumberFive(AnswerValues5[compareValue5])
+									addAnswerToPage5 = containerAnswerOption.children[compareValue5].innerText = addAnswerToChildNodes5
+								}	
+							}
+						})
+					    }
+					  // Baris akhir function 
 }
 // Baris akhir object
 
@@ -230,6 +261,16 @@ function QuestionNotEmty()
 			case questionsList[3] : 
 			{	
 				showQuestionAndAnswer.ShowAnswerToPage3()
+			}
+			break		
+			case questionsList[4] : 
+			{	
+				showQuestionAndAnswer.ShowAnswerToPage4()
+			}
+			break		
+			case questionsList[5] : 
+			{	
+				showQuestionAndAnswer.ShowAnswerToPage5()
 			}
 			break		
 		}
